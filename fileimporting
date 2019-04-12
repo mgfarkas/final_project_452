@@ -1,6 +1,9 @@
 ## looping through a directory of files
 
+# below reads a directory and accumulates the file names when files are text
+
 import os
+
 
 # setting path variable to the directory where the files are stored
 path = 'files'
@@ -8,16 +11,15 @@ path = 'files'
 folder = os.fsencode(path)
 
 # checking if I can accumulate the file names as a list
-pdffilenames = []
+txtfilenames = []
 
 for file in os.listdir(folder):
     filename = os.fsdecode(file)
-    if filename.endswith( ('.pdf') ):
-        #slicing off the file extension
-        pdffilenames.append(filename[0:-4])
+    if filename.endswith( ('.txt') ):
+#slicing off the file extension
+        txtfilenames.append(filename[0:-4])
 
-# printing the length of the list to ensure I am only collecting pdfs
-print(len(pdffilenames))
+# printing the length of the list to ensure I am only collecting text files
+print(len(txtfilenames))
 # printing the list of file names
-print(pdffilenames)
-
+print(txtfilenames)
