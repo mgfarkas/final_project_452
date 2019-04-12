@@ -1,13 +1,28 @@
 ## looping through a directory of files
 
 import os
+import PyPDF2
 
-for filename in os.listdir(directory):
-    if filename.endswith(".pdf"): 
-         # print(os.path.join(directory, filename))
-        continue
-    else:
-        continue
+# setting path variable to the directory where the files are stored
+path = 'files'
+
+folder = os.fsencode(path)
+
+# checking if I can accumulate the file names as a list
+pdffilenames = []
+
+for file in os.listdir(folder):
+    filename = os.fsdecode(file)
+    if filename.endswith( ('.pdf') ):
+        #slicing off the file extension
+        pdffilenames.append(filename[0:-4])
+
+# printing the length of the list to ensure I am only collecting pdfs
+print(len(pdffilenames))
+# printing the list of file names
+print(pdffilenames)
+
+## working with the pdf reader (PyPDF2)
 
 ## extracting text from PDF using PYPDF2
 # importing required modules 
