@@ -1,21 +1,57 @@
-import os
+def main():
 
-# set this to directory where files are stored
-path = 'files'
+    import csv
+    import os
 
-# for now, accumulating everything as lists
-# will define variables and find that info in file next
-txtfilenames = []
-reportcontent = []
+    def target_ihpa_log(thewords):
+        try:
+            content = thewords.index('log')+2
+            target = thewords[content:content+1]
+            return target
+        except:
+            return "X"
 
-for file in os.listdir(path):
-    filename = os.fsdecode(file)
-    if filename.endswith(".txt"):
-        txtfilenames.append(filename[0:-4])# slicing off the file extension to create document number
-        f = open(filename, 'rt')
-        contents = f.read()
-        reportcontent.append(contents)
-#        print(contents)
 
-print(reportcontent)
-print(txtfilenames)
+    def target_county(thewords):
+        try:
+            content = thewords.index('county:')+1
+            content1 = thewords.index('quadrangle:')
+            target = thewords[content:content1]
+            return target
+        except:
+            return "X"
+
+    outfile = open('doc_data.csv', 'w', encoding='utf-8')
+
+    csvout = csv.writer(outfile)
+
+    csvout.writerow(['doc_no','ihpa_log','county'])
+
+    path = 'small_test'
+
+#    txtfilenames = []
+#    reportcontent = []
+
+    for file in os.scandir(path):
+        filename = os.fsdecode(file)
+        if filename.endswith(".txt"):
+            txtfilename = filename[11:-4]
+            infile = open(filename, 'rt')
+            contents = infile.read()
+            infile.close()
+
+            contentslower = contents.lower()
+
+            thewords = contentslower.split()
+
+            ihpa_log = ','.join(target_ihpa_log(thewords))
+            county = ','.join(target_county(thewords))
+
+            row = [txtfilename, ihpa_log, county]
+            csvout.writerow(row)
+
+
+
+
+
+main()
