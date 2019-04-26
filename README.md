@@ -18,4 +18,4 @@ I hope to enhance the identification of target text elements in future versions.
 
 3) The output file is named 'doc_data.csv'. You can rename this in the file. Or, if making multiple use of the script, copy or rename the csv after each run. Otherwise, the file will be overwritten.
 
-With the current version, the output csv will require data cleaning! This is due to the use of non-stand format of the supposedly standarized document. 
+With the current version, the output csv will require data cleaning! This is due to the use of non-standard format of the supposedly standarized document. 
