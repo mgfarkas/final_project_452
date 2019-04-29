@@ -11,10 +11,9 @@ Initially I was looking at Textract, PyPDF2, and pdfminer to extract pdf text in
 I hope to enhance the identification of target text elements in future versions. I hope to begin by exploration of REGEX to identify my target text and set index positions for slicing.
 
 # TO USE
-Best results derive from the code in the file named mgfarkas_452_finalproject   I recommend using this.
+Best results derive from the code in the file named [mgfarkas_452_finalproject](/mgfarkas_452_finalproject.py)  I recommend using this.
 An earlier and slightly differnt version also works but the results are not as clean and slightly different. Use code mgfarkas_452_finalproject_B to experiment with this version.
 
-[Contribution guidelines for this project](/mgfarkas_452_finalproject.py)
 
 1) Convert your text files to plain text and store these in a directory on your machine.
      I have experienced issues with the encoding of the files exported from Acrobat. Acrobat was set to export as UTF-8. However, there was      some issue here. The files are actually windows-1252. 
