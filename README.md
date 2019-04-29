@@ -11,11 +11,16 @@ Initially I was looking at Textract, PyPDF2, and pdfminer to extract pdf text in
 I hope to enhance the identification of target text elements in future versions. I hope to begin by exploration of REGEX to identify my target text and set index positions for slicing.
 
 # TO USE
+Best results derive from the code in the file named mgfarkas_452_finalproject   I recommend using this.
+An earlier and slightly differnt version also works but the results are not as clean and slightly different. Use code mgfarkas_452_finalproject_B to experiment with this version.
+
 1) Convert your text files to plain text and store these in a directory on your machine.
      I have experienced issues with the encoding of the files exported from Acrobat. Acrobat was set to export as UTF-8. However, there was      some issue here. The files are actually windows-1252. 
      
 2) Set you directory in the .py file to the directory where the text files are located. This is assigned to the 'path' variable in the script.
 
-3) The output file is named 'doc_data.csv'. You can rename this in the file. Or, if making multiple use of the script, copy or rename the csv after each run. Otherwise, the file will be overwritten.
+3) I recommend placing the py file either in the directory holding the txt files or one level up.
 
-With the current version, the output csv will require data cleaning! This is due to the use of non-standard format of the supposedly standarized document. 
+4) The output file is named 'doc_data.csv'. You can rename this in the file. Or, if making multiple use of the script, copy or rename the csv after each run. Otherwise, the file will be overwritten.
+
+With the current version, the output csv will require data cleaning! This is due to the use of non-standard format of the supposedly standarized Illinois HPA document. 
