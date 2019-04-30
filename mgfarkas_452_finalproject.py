@@ -67,8 +67,6 @@ def main():
 
     path = 'small_test'
 
-#    txtfilenames = []
-#    reportcontent = []
 
     for file in os.scandir(path):
         filename = os.fsdecode(file)
