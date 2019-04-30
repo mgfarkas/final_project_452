@@ -43,11 +43,27 @@ def main():
             return "X"
 
 
-    outfile = open('doc_data.csv', 'w', encoding='utf-8', newline = '')
+    def target_agency(thewords):
+        try:
+            contentstart = thewords.index('agency:')+1
+            target = thewords[contentstart:contentstart+2]
+            return target
+        except ValueError:
+            pass
+        try:
+            contentstart2 = thewords.index('agencies:')+1
+            target2 = thewords[contentstart2:contentstart2+2]
+            return target2
+        except:
+            return "X"
+
+
+
+    outfile = open('doc_data2.csv', 'w', encoding='utf-8', newline = '')
 
     csvout = csv.writer(outfile)
 
-    csvout.writerow(['doc_no','ihpa_log', 'archaeologist', 'county', 'quadmap'])
+    csvout.writerow(['doc_no','ihpa_log', 'agency', 'archaeologist', 'county', 'quadmap'])
 
     path = 'small_test'
 
@@ -72,8 +88,9 @@ def main():
             quad_map_dirty = ','.join(target_guadrangle(thewords))
             quadmap_clean = quad_map_dirty.replace(',',' ')
             archaeologist = archaeologist_dirty.replace(',',' ')
+            agency = ' '.join(target_agency(thewords))
 
-            row = [txtfilename, ihpa_log, archaeologist, county, quadmap_clean]
+            row = [txtfilename, ihpa_log, agency, archaeologist, county, quadmap_clean]
             csvout.writerow(row)
 
 
@@ -85,3 +102,4 @@ def main():
 
 
 main()
+
