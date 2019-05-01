@@ -49,13 +49,12 @@ def main():
             target = thewords[contentstart:contentstart+2]
             return target
         except ValueError:
-            pass
-        try:
-            contentstart2 = thewords.index('agencies:')+1
-            target2 = thewords[contentstart2:contentstart2+2]
-            return target2
-        except:
-            return "X"
+            try:
+                contentstart2 = thewords.index('agencies:')+1
+                target2 = thewords[contentstart2:contentstart2+2]
+                return target2
+            except:
+                return "X"
 
 
 
