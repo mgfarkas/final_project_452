@@ -92,11 +92,7 @@ def main():
             csvout.writerow(row)
 
 
-#            print(archaeologist_dirty)
 
-
-#    print(reportcontent)
-#   print(txtfilenames)
 
 
 main()
