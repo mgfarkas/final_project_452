@@ -12,7 +12,7 @@ I hope to enhance the identification of target text elements in future versions.
 
 # TO USE
 Best results derive from the code in the file named [mgfarkas_452_finalproject](/mgfarkas_452_finalproject.py)  I recommend using this.
-An earlier and slightly differnt version also works but the results are not as clean and slightly different. Use code [mgfarkas_452_finalproject_B](mgfarkas_452_finalproject_b.py)  to experiment with this version.
+An earlier and slightly differnt version also works but the results are not as clean and slightly different. Use code [mgfarkas_452_abandondedfinalproject.py](mgfarkas_452_abandondedfinalproject.py)  to experiment with this version.
 
 
 1) Convert your text files to plain text and store these in a directory on your machine.
