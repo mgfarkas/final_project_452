@@ -71,7 +71,7 @@ def main():
     csvout.writerow(['doc_no','ihpa_log', 'agency', 'archaeologist', 'county', 'quadmap'])
 
 # setting the path variable to the directory holding the files I will iterate over
-    path = input('enter the relative directory: ')
+    path = path = 'files_to_process'
 
 # the for loop where I iterate over the files in the path
     for file in os.scandir(path):
@@ -106,4 +106,3 @@ def main():
 
 
 main()
-
