@@ -15,20 +15,18 @@ Best results derive from the code in the file named [mgfarkas_452_finalproject](
 An earlier and slightly differnt version also works but the results are not as clean and slightly different. Use code [mgfarkas_452_abandondedfinalproject.py](mgfarkas_452_abandondedfinalproject.py)  to experiment with this version.
 
 
+## READ ME
 This Python program attempts to extract information from text file formats of the State of Illinois Archaeological Short Survey Report form (ASSR).
 It was only tested in a Windows environment!
-
-To use, please ensure the following:
-1) Export the PDF ASSR reports to plain text version. Ensure the files have a “.txt” extension.
-2) Place these in a directory on your computer. It is fine to use the same directory where the pdf’s are located.
-3) I place the Python file (mgfarkas_452_finalproject.py)  one directory level below the directory containing the text files.
+# To use, please ensure the following:
+NOTE: I have exported the files to txt and placed in a directory with the required name. The original pdf file sizes are too large to submit via moodle.
+1) Place the directory of files in a directory on your computer. 
+2) I place the Python file (mgfarkas_452_finalproject.py)  one directory level below the directory containing the text files.
 	For example, if the files you intend to process are located at
-	\\documents\assr_files  you should place the python files in the \\documents directory
-4) The output file will be formatted as csv and be named “extracted_data.csv”. In the above example of directory path, the output file will be produced in the \\documents directory. The output name can be changed by editing the file name at line 65 of the python file.
-5) Double click the file (mgfarkas_452_finalproject.py) to run.
-6) You will be asked to provide the relative directory path. This is the path, relative to the python file, where the files to be processed are located.
-	In the above example, you would enter at the prompt: assr_files (no quotes)
-7) once done, open the csv file in the application of your choice and inspect the results. An entry of X in any cell indicates the targeted information could not be identified. This does not imply that information is not in the file.
+	\\documents\files_to_process  you should place the python files in the \\documents directory
+3) The output file will be formatted as csv and be named “extracted_data.csv”. In the above example of directory path, the output file will be produced in the \\documents directory. The output name can be changed by editing the file name at line 65 of the python file.
+4) Run the file py file (mgfarkas_452_finalproject.py).
+5) once done, open the csv file in the application of your choice and inspect the results. An entry of X in any cell indicates the targeted information could not be identified. This does not imply that information is not in the file.
 
 
 
