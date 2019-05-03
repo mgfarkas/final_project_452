@@ -77,7 +77,7 @@ def main():
     for file in os.scandir(path):
         filename = os.fsdecode(file)
         if filename.endswith(".txt"):# filtering so to only try to process text files
-            txtfilename = filename[11:-4]# capturing the file name and slicing off leading directory path and the .txt extension
+            txtfilename = filename[17:-4]# capturing the file name and slicing off leading directory path and the .txt extension
             infile = open(filename, 'rt')# now opening the file and assigning to infile variable
             contents = infile.read()# using .read to grab entire file contents as a single string
             infile.close()# closing the file
