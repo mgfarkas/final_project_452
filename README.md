@@ -21,7 +21,7 @@ It was only tested in a Windows environment!
 # To use, please ensure the following:
 NOTE: I have exported the files to txt and placed in a directory with the required name. The original pdf file sizes are too large to submit via moodle.
 1) Place the directory of files in a directory on your computer. 
-2) I place the Python file (mgfarkas_452_finalproject.py)  one directory level below the directory containing the text files.
+2) Place the Python file (mgfarkas_452_finalproject.py)  one directory level below the directory containing the text files.
 	For example, if the files you intend to process are located at
 	\\documents\files_to_process  you should place the python files in the \\documents directory
 3) The output file will be formatted as csv and be named “extracted_data.csv”. In the above example of directory path, the output file will be produced in the \\documents directory. The output name can be changed by editing the file name at line 65 of the python file.
